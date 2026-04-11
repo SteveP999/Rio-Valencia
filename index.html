@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rio Valencia — Latin Pop · Global Sound</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black:   #030209;
+  --ink:     #060412;
+  --deep:    #0B0718;
+  --magenta: #CC35D0;
+  --mag-lt:  #E870F0;
+  --cyan:    #22C8FF;
+  --cyan-lt: #88E8FF;
+  --violet:  #6B20A0;
+  --white:   #F2EEFF;
+  --chrome:  #C4C0DC;
+  --mist:    #887EA8;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── NAV ─────────────────────────────────────────────────────────────────── */
+#topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 68px;
+  background: transparent; border-bottom: 1px solid transparent;
+  transition: background 0.4s, border-color 0.4s;
+}
+#topnav.scrolled {
+  background: rgba(3,2,9,0.95);
+  border-color: rgba(204,53,208,0.3);
+  backdrop-filter: blur(12px);
+}
+.nav-logo { height: 44px; width: auto; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  color: var(--mist); text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--mag-lt); }
+
+/* ── HERO ─────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative; height: 100vh; min-height: 640px;
+  display: flex; align-items: flex-end; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-hero-photo.png') center 30% / cover no-repeat;
+}
+.hero-vignette {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(3,2,9,0.55) 0%, rgba(3,2,9,0.05) 35%, rgba(3,2,9,0.05) 50%, rgba(3,2,9,0.97) 100%),
+    linear-gradient(to right, rgba(3,2,9,0.8) 0%, transparent 60%);
+}
+.hero-glow {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 340px;
+  background: linear-gradient(to top, rgba(204,53,208,0.1) 0%, rgba(34,200,255,0.04) 60%, transparent 100%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 3.5rem 5rem; max-width: 700px;
+}
+.hero-logo-wrap { margin-bottom: 1.8rem; }
+.hero-logo-wrap img {
+  height: 130px; width: auto;
+  filter: drop-shadow(0 4px 28px rgba(204,53,208,0.55)) drop-shadow(0 0 60px rgba(34,200,255,0.2));
+}
+.hero-tagline {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 300;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--chrome); opacity: 0.75;
+  margin-bottom: 2rem; line-height: 1.9;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.cta-primary {
+  background: linear-gradient(135deg, var(--magenta), var(--violet));
+  color: var(--white); border: none;
+  padding: 0.85rem 2rem;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
+  box-shadow: 0 0 22px rgba(204,53,208,0.45);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.cta-primary:hover { box-shadow: 0 0 38px rgba(204,53,208,0.75); transform: translateY(-2px); }
+.cta-secondary {
+  background: transparent; color: var(--cyan-lt);
+  border: 1px solid rgba(34,200,255,0.5);
+  padding: 0.85rem 2rem; text-decoration: none; display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 400;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(34,200,255,0.5);
+  transition: border-color 0.2s, text-shadow 0.2s;
+}
+.cta-secondary:hover { border-color: var(--cyan); text-shadow: 0 0 24px rgba(34,200,255,0.9); }
+
+/* ── SECTION CHROME ──────────────────────────────────────────────────────── */
+.section-header { text-align: center; padding: 5rem 2rem 3.5rem; }
+.section-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.35em; text-transform: uppercase; color: var(--magenta);
+  text-shadow: 0 0 12px rgba(204,53,208,0.6); margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--cyan-lt), var(--chrome), var(--mag-lt));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.neon-rule {
+  width: 60px; height: 2px; margin: 1.2rem auto 0;
+  background: linear-gradient(to right, var(--magenta), var(--cyan));
+  box-shadow: 0 0 10px rgba(204,53,208,0.5);
+}
+
+/* ── BIO ─────────────────────────────────────────────────────────────────── */
+#bio { background: var(--ink); padding-bottom: 5rem; position: relative; z-index: 1; }
+.bio-inner {
+  max-width: 700px; margin: 0 auto; padding: 0 2rem; text-align: center;
+}
+.bio-inner p { color: var(--mist); line-height: 1.95; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.bio-inner em { color: var(--chrome); font-style: italic; }
+
+/* ── LATEST SINGLE ───────────────────────────────────────────────────────── */
+#latest-single {
+  background: var(--deep); padding: 5rem 0;
+  border-top: 1px solid rgba(204,53,208,0.2);
+  border-bottom: 1px solid rgba(34,200,255,0.1);
+  position: relative; z-index: 1;
+}
+.latest-header { text-align: center; padding: 0 2rem 3.5rem; }
+.latest-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.35em; text-transform: uppercase; color: var(--magenta);
+  text-shadow: 0 0 12px rgba(204,53,208,0.6); margin-bottom: 0.75rem;
+}
+.latest-inner {
+  max-width: 1040px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 380px 1fr; gap: 4rem; align-items: center;
+}
+.latest-art {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  box-shadow: 0 0 60px rgba(204,53,208,0.3), 0 0 30px rgba(34,200,255,0.15), 0 24px 64px rgba(0,0,0,0.8);
+}
+.latest-badge {
+  display: inline-block; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--magenta); border: 1px solid rgba(204,53,208,0.4);
+  padding: 0.25rem 0.85rem; margin-bottom: 1.2rem;
+  text-shadow: 0 0 8px rgba(204,53,208,0.4);
+}
+.latest-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase;
+  letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.5rem; color: var(--white);
+}
+.latest-sub {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--mist); margin-bottom: 2rem;
+}
+.latest-play-btn {
+  background: transparent; color: var(--magenta);
+  border: 1px solid rgba(204,53,208,0.5); cursor: pointer;
+  padding: 0.85rem 2rem; display: inline-flex; align-items: center; gap: 0.75rem;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.latest-play-btn:hover { border-color: var(--magenta); box-shadow: 0 0 20px rgba(204,53,208,0.35); }
+
+/* ── SINGLES GRID ────────────────────────────────────────────────────────── */
+#singles { background: var(--ink); padding: 5rem 0; border-top: 1px solid rgba(204,53,208,0.12); position: relative; z-index: 1; }
+.singles-wrap { max-width: 980px; margin: 0 auto; padding: 0 2rem; }
+.singles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.single-card {
+  position: relative; cursor: pointer;
+  border: 1px solid rgba(204,53,208,0.12);
+  background: rgba(204,53,208,0.02); overflow: hidden;
+  transition: border-color 0.2s;
+}
+.single-card:hover { border-color: rgba(204,53,208,0.38); }
+.single-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(to right, var(--magenta), var(--cyan));
+}
+.single-art-wrap { position: relative; overflow: hidden; }
+.single-art-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.single-card:hover .single-art-img { transform: scale(1.04); }
+.single-play-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(3,2,9,0.55); opacity: 0; transition: opacity 0.2s;
+}
+.single-card:hover .single-play-overlay { opacity: 1; }
+.single-play-big {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--magenta), var(--violet));
+  border: none; color: var(--white); font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; padding-left: 4px;
+  box-shadow: 0 0 20px rgba(204,53,208,0.5);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.single-play-big:hover { transform: scale(1.08); box-shadow: 0 0 30px rgba(204,53,208,0.7); }
+.single-info { padding: 1.2rem 1.3rem 1.5rem; }
+.single-type {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--magenta);
+  font-weight: 400; margin-bottom: 0.35rem; text-shadow: 0 0 8px rgba(204,53,208,0.4);
+}
+.single-name {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+  line-height: 1.1; margin-bottom: 0.2rem;
+}
+.single-by {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: rgba(34,200,255,0.45); font-weight: 400;
+}
+.single-streams { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+.ss-btn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.25rem 0.65rem; text-decoration: none; border-radius: 2px;
+  transition: opacity 0.15s;
+}
+.ss-btn:hover { opacity: 0.85; }
+.ss-spotify { background: #1DB954; color: #000; }
+.ss-apple   { background: #fc3c44; color: #fff; }
+.ss-ytm     { background: #FF0000; color: #fff; }
+.ss-video   { background: #333;    color: #fff; }
+
+/* ── ALBUM ────────────────────────────────────────────────────────────────── */
+#album { background: var(--deep); padding: 5rem 0; border-top: 1px solid rgba(34,200,255,0.1); position: relative; z-index: 1; }
+.album-layout {
+  max-width: 1040px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 380px 1fr; gap: 4rem; align-items: start;
+}
+.album-cover {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  box-shadow: 0 0 60px rgba(204,53,208,0.2), 0 0 120px rgba(34,200,255,0.1), 0 24px 64px rgba(0,0,0,0.8);
+}
+.album-badge {
+  display: inline-block; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--cyan); border: 1px solid rgba(34,200,255,0.4);
+  padding: 0.25rem 0.85rem; margin-bottom: 1.2rem; text-shadow: 0 0 8px rgba(34,200,255,0.4);
+}
+.album-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase;
+  letter-spacing: 0.06em; line-height: 1.1; margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--mag-lt), var(--chrome), var(--cyan-lt));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.album-artist {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--mist); margin-bottom: 1.2rem;
+}
+.album-desc { color: var(--mist); font-size: 0.92rem; line-height: 1.85; margin-bottom: 2rem; max-width: 460px; }
+.album-desc em { color: var(--chrome); font-style: italic; }
+.stream-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+.stream-btn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+  color: var(--cyan); border: 1px solid rgba(34,200,255,0.35);
+  padding: 0.4rem 1rem; transition: border-color 0.2s, box-shadow 0.2s;
+  text-shadow: 0 0 8px rgba(34,200,255,0.3);
+}
+.stream-btn:hover { border-color: var(--cyan); box-shadow: 0 0 12px rgba(34,200,255,0.3); }
+.tracklist { border-top: 1px solid rgba(204,53,208,0.12); }
+.track-row {
+  display: grid; grid-template-columns: 2rem 1fr auto;
+  align-items: center; gap: 0.75rem; padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(204,53,208,0.06); transition: background 0.2s;
+}
+.track-row:hover { background: rgba(204,53,208,0.04); }
+.track-num { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; color: var(--mist); opacity: 0.4; text-align: right; }
+.track-title { font-size: 0.9rem; color: var(--white); letter-spacing: 0.02em; }
+.track-sub { font-size: 0.75rem; color: var(--mist); opacity: 0.55; letter-spacing: 0.03em; }
+.track-play-btn {
+  background: transparent; border: 1px solid rgba(204,53,208,0.3);
+  color: var(--magenta); width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 0.6rem; flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.track-play-btn:hover { background: rgba(204,53,208,0.12); border-color: var(--magenta); box-shadow: 0 0 10px rgba(204,53,208,0.3); }
+.track-play-btn.playing { background: rgba(204,53,208,0.18); border-color: var(--mag-lt); box-shadow: 0 0 15px rgba(204,53,208,0.4); }
+
+/* ── FIXED PLAYER ─────────────────────────────────────────────────────────── */
+#player {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(3,2,9,0.97); border-top: 1px solid rgba(204,53,208,0.3);
+  backdrop-filter: blur(16px);
+  grid-template-columns: auto 1fr auto; align-items: center;
+  gap: 1.5rem; padding: 0.8rem 2rem;
+  transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+#player.visible { transform: translateY(0); }
+.p-info { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.p-thumb { width: 42px; height: 42px; object-fit: cover; border: 1px solid rgba(204,53,208,0.3); flex-shrink: 0; box-shadow: 0 0 10px rgba(204,53,208,0.2); }
+.p-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.06em; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-sub { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); opacity: 0.55; }
+.p-controls { display: flex; align-items: center; flex-direction: column; flex: 1; gap: 0.5rem; min-width: 0; }
+.p-btn-row { display: flex; align-items: center; gap: 1.2rem; }
+.p-btn { background: transparent; border: none; color: var(--mist); cursor: pointer; font-size: 0.9rem; padding: 0.25rem; transition: color 0.2s; }
+.p-btn:hover { color: var(--mag-lt); }
+#p-playbtn {
+  width: 36px; height: 36px; border: 1px solid rgba(204,53,208,0.5);
+  background: transparent; color: var(--magenta); cursor: pointer; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#p-playbtn:hover { background: rgba(204,53,208,0.12); box-shadow: 0 0 15px rgba(204,53,208,0.4); }
+.p-progress { display: flex; align-items: center; gap: 0.75rem; width: 100%; }
+.p-time { font-size: 0.6rem; color: var(--mist); opacity: 0.55; white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; }
+#p-bar { flex: 1; height: 3px; background: rgba(204,53,208,0.15); cursor: pointer; position: relative; }
+#p-fill { height: 100%; width: 0%; background: linear-gradient(to right, var(--magenta), var(--cyan)); box-shadow: 0 0 8px rgba(204,53,208,0.5); pointer-events: none; }
+.p-right { display: flex; align-items: center; gap: 1rem; }
+#p-vol { width: 72px; accent-color: var(--magenta); }
+#p-close { background: transparent; border: none; color: var(--mist); cursor: pointer; font-size: 1rem; opacity: 0.5; transition: opacity 0.2s; }
+#p-close:hover { opacity: 1; }
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--black); border-top: 1px solid rgba(204,53,208,0.12);
+  padding: 4rem 2rem 3rem; text-align: center; position: relative; z-index: 1;
+}
+.foot-logo { height: 60px; width: auto; margin: 0 auto 1.2rem; display: block; opacity: 0.8; }
+.foot-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--mist); opacity: 0.4; margin-bottom: 1.5rem;
+}
+.foot-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.foot-links a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mist); text-decoration: none; opacity: 0.4; transition: opacity 0.2s, color 0.2s;
+}
+.foot-links a:hover { opacity: 1; color: var(--mag-lt); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .latest-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .latest-art { max-width: 280px; margin: 0 auto; display: block; }
+  .album-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .album-cover { max-width: 300px; margin: 0 auto; }
+  .singles-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 0 1.8rem 3.5rem; }
+  .hero-logo-wrap img { height: 85px; }
+  #player { grid-template-columns: 1fr; }
+  .p-info { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="topnav">
+  <a href="#"><img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/Rio%20Valencia%20Logo%20and%20Text.png" alt="Rio Valencia" class="nav-logo"></a>
+  <ul class="nav-links">
+    <li><a href="#bio">About</a></li>
+    <li><a href="#latest-single">Latest</a></li>
+    <li><a href="#singles">Singles</a></li>
+    <li><a href="#album">Discography</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/Rio%20Valencia%20Logo%20and%20Text.png" alt="Rio Valencia">
+    </div>
+    <p class="hero-tagline">Latin Pop · Global Sound · Bilingual<br>Hello Texas Records</p>
+    <div class="hero-ctas">
+      <button class="cta-primary" onclick="playTrack('midnight')">&#9654;&nbsp; Play Midnight Line</button>
+      <a href="#album" class="cta-secondary">Discography</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIO / ABOUT -->
+<section id="bio">
+  <div class="section-header">
+    <div class="section-eyebrow">About</div>
+    <h2 class="section-title">Rio Valencia</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="bio-inner">
+    <p>Rio Valencia doesn't pick a lane — he drives through all of them. Born where two worlds meet, his sound moves between English and Spanish the way a city moves between day and night: naturally, without warning, and with something electric in the air.</p>
+    <p>His debut album <em>Midnight Line</em> is a cinematic journey through late-night streets and long-distance feelings — bilingual storytelling wrapped in sleek Latin pop production with a pulse that crosses every border.</p>
+    <p>Released through Hello Texas Records. No limits. No translation required.</p>
+  </div>
+</section>
+
+<!-- LATEST SINGLE FEATURED -->
+<section id="latest-single">
+  <div class="latest-header">
+    <div class="latest-eyebrow">Latest Single</div>
+    <h2 class="section-title" id="latest-section-title">Midnight Line</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="latest-inner">
+    <div>
+      <img id="latest-cover" src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midnight-line-cover.png" alt="Midnight Line" class="latest-art">
+    </div>
+    <div>
+      <div class="latest-badge">Latest Release</div>
+      <h2 id="latest-title" class="latest-title">Midnight Line</h2>
+      <div class="latest-sub">Rio Valencia · Hello Texas Records</div>
+      <button class="latest-play-btn" onclick="playTrack('midnight')">&#9654;&nbsp; Play Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- SINGLES -->
+<section id="singles">
+  <div class="singles-wrap">
+    <div class="section-header" style="padding-top:0;text-align:left;">
+      <div class="section-eyebrow">Singles</div>
+      <h2 class="section-title">All Releases</h2>
+      <div class="neon-rule" style="margin-left:0;"></div>
+    </div>
+    <div class="singles-grid">
+
+      <!-- Midnight Line -->
+      <div class="single-card" onclick="playTrack('midnight')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midnight-line-cover.png" alt="Midnight Line" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('midnight')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single · New</div>
+          <div class="single-name">Midnight Line</div>
+          <div class="single-by">Rio Valencia</div>
+        </div>
+      </div>
+
+      <!-- No Te Vas -->
+      <div class="single-card" onclick="playTrack('notevas')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-no-te-vas-you-dont-leave-cover.png" alt="No Te Vas" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('notevas')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single</div>
+          <div class="single-name">No Te Vas</div>
+          <div class="single-by">Rio Valencia · You Don't Leave</div>
+        </div>
+      </div>
+
+      <!-- Sin Regresar -->
+      <div class="single-card" onclick="playTrack('sinregresar')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-sin-regresar-no-going-back-cover.png" alt="Sin Regresar" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('sinregresar')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single</div>
+          <div class="single-name">Sin Regresar</div>
+          <div class="single-by">Rio Valencia · No Going Back</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ALBUM: MIDNIGHT LINE -->
+<section id="album">
+  <div class="section-header">
+    <div class="section-eyebrow">Debut Album</div>
+    <h2 class="section-title">Midnight Line</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="album-layout">
+    <div>
+      <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midneight-line-album-cover.png" alt="Midnight Line" class="album-cover">
+    </div>
+    <div style="padding-top:0.5rem;">
+      <div class="album-badge">Debut Album</div>
+      <h2 class="album-title">Midnight Line</h2>
+      <div class="album-artist">Rio Valencia</div>
+      <p class="album-desc">Three songs. Two languages. One vision. <em>Midnight Line</em> moves between English and Spanish the way neon moves across wet pavement — fluid, luminous, and impossible to look away from.</p>
+      <div class="stream-row">
+        <!-- Streaming links coming soon -->
+      </div>
+      <div class="tracklist">
+        <div class="track-row">
+          <span class="track-num">01</span>
+          <span class="track-title">Midnight Line</span>
+          <button class="track-play-btn" id="btn_midnight" onclick="playTrack('midnight')">&#9654;</button>
+        </div>
+        <div class="track-row">
+          <span class="track-num">02</span>
+          <span class="track-title">No Te Vas <span class="track-sub">(You Don't Leave)</span></span>
+          <button class="track-play-btn" id="btn_notevas" onclick="playTrack('notevas')">&#9654;</button>
+        </div>
+        <div class="track-row">
+          <span class="track-num">03</span>
+          <span class="track-title">Sin Regresar <span class="track-sub">(No Going Back)</span></span>
+          <button class="track-play-btn" id="btn_sinregresar" onclick="playTrack('sinregresar')">&#9654;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/Rio%20Valencia%20Logo%20and%20Text.png" alt="Rio Valencia" class="foot-logo">
+  <div class="foot-label">A Hello Texas Records Release · hellotexasrecords.com</div>
+  <div class="foot-links">
+    <a href="#bio">About</a>
+    <a href="#singles">Singles</a>
+    <a href="#album">Discography</a>
+    <a href="https://hellotexasrecords.com">Label</a>
+  </div>
+</footer>
+
+<!-- FIXED PLAYER -->
+<div id="player">
+  <div class="p-info">
+    <img id="p-thumb" class="p-thumb" src="" alt="">
+    <div>
+      <div id="p-title" class="p-title">—</div>
+      <div id="p-sub" class="p-sub">Rio Valencia</div>
+    </div>
+  </div>
+  <div class="p-controls">
+    <div class="p-btn-row">
+      <button class="p-btn" onclick="prevTrack()" title="Previous">&#9664;&#9664;</button>
+      <button id="p-playbtn" onclick="togglePlay()">&#9654;</button>
+      <button class="p-btn" onclick="nextTrack()" title="Next">&#9654;&#9654;</button>
+    </div>
+    <div class="p-progress">
+      <span class="p-time" id="p-cur">0:00</span>
+      <div id="p-bar" onclick="seekTo(event)"><div id="p-fill"></div></div>
+      <span class="p-time" id="p-dur">0:00</span>
+    </div>
+  </div>
+  <div class="p-right">
+    <input type="range" id="p-vol" min="0" max="1" step="0.01" value="0.85" oninput="setVol(this.value)">
+    <button id="p-close" onclick="closePlayer()" title="Close">✕</button>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+
+<script>
+const BASE = 'https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/';
+
+const TRACKS = {
+  midnight:    {
+    title: 'Midnight Line',
+    sub:   'Midnight Line',
+    src:   'https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1',
+    thumb: BASE + 'rio-valencia-midnight-line-cover.png'
+  },
+  notevas:     {
+    title: 'No Te Vas',
+    sub:   'Midnight Line',
+    src:   'https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1',
+    thumb: BASE + 'rio-valencia-no-te-vas-you-dont-leave-cover.png'
+  },
+  sinregresar: {
+    title: 'Sin Regresar',
+    sub:   'Midnight Line',
+    src:   'https://www.dropbox.com/scl/fi/qmudqmb5o7j7v4qerxqt8/Sin-Regresar-No-Going-Back-Mastered-MP3.mp3?rlkey=ezfsi6s2xosteslvlldhuiiug&raw=1',
+    thumb: BASE + 'rio-valencia-sin-regresar-no-going-back-cover.png'
+  }
+};
+const ORDER = ['midnight', 'notevas', 'sinregresar'];
+
+let currentId = null, isPlaying = false;
+const audio  = document.getElementById('audio');
+const player = document.getElementById('player');
+
+function fmtTime(s) {
+  if (isNaN(s)) return '0:00';
+  return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+}
+
+function updatePlayBtn(playing) {
+  document.getElementById('p-playbtn').innerHTML = playing ? '&#9646;&#9646;' : '&#9654;';
+}
+
+function setAllTrackBtns(id, playing) {
+  document.querySelectorAll('.track-play-btn').forEach(b => b.classList.remove('playing'));
+  if (id && playing) {
+    const btn = document.getElementById('btn_' + id);
+    if (btn) btn.classList.add('playing');
+  }
+}
+
+function playTrack(id) {
+  const t = TRACKS[id]; if (!t) return;
+  currentId = id;
+  audio.src = t.src; audio.load();
+  audio.play().catch(() => {});
+  isPlaying = true;
+  document.getElementById('p-thumb').src = t.thumb;
+  document.getElementById('p-title').textContent = t.title;
+  document.getElementById('p-sub').textContent = t.sub;
+  player.style.display = 'grid';
+  player.classList.add('visible');
+  updatePlayBtn(true);
+  setAllTrackBtns(id, true);
+}
+
+function togglePlay() {
+  if (!currentId) return;
+  if (isPlaying) {
+    audio.pause(); isPlaying = false;
+    updatePlayBtn(false); setAllTrackBtns(currentId, false);
+  } else {
+    audio.play().catch(() => {}); isPlaying = true;
+    updatePlayBtn(true); setAllTrackBtns(currentId, true);
+  }
+}
+
+function prevTrack() {
+  const i = ORDER.indexOf(currentId);
+  playTrack(ORDER[(i - 1 + ORDER.length) % ORDER.length]);
+}
+function nextTrack() {
+  const i = ORDER.indexOf(currentId);
+  playTrack(ORDER[(i + 1) % ORDER.length]);
+}
+function closePlayer() {
+  audio.pause(); isPlaying = false;
+  player.classList.remove('visible');
+  setTimeout(() => { if (!player.classList.contains('visible')) player.style.display = 'none'; }, 380);
+  updatePlayBtn(false); setAllTrackBtns(null, false);
+}
+function seekTo(e) {
+  const r = document.getElementById('p-bar').getBoundingClientRect();
+  audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
+}
+function setVol(v) { audio.volume = parseFloat(v); }
+
+audio.addEventListener('timeupdate', () => {
+  const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+  document.getElementById('p-fill').style.width = pct + '%';
+  document.getElementById('p-cur').textContent = fmtTime(audio.currentTime);
+  document.getElementById('p-dur').textContent = fmtTime(audio.duration);
+});
+audio.addEventListener('ended', nextTrack);
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Load latest.json to update latest single display
+fetch('latest.json').then(r => r.json()).then(d => {
+  if (d.title) {
+    document.querySelectorAll('#latest-title, #latest-section-title').forEach(el => el.textContent = d.title);
+  }
+  if (d.cover) {
+    document.querySelectorAll('#latest-cover').forEach(el => el.src = d.cover);
+  }
+}).catch(() => {});
+</script>
+</body>
+</html>
