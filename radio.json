@@ -1,0 +1,30 @@
+{
+  "artist": "Rio Valencia",
+  "featuredTrack": {
+    "title": "Midnight Line",
+    "artist": "Rio Valencia",
+    "album": "Midnight Line",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midnight-line-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1"
+  },
+  "tracks": [
+    {
+      "title": "No Control",
+      "album": "Midnight Line",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-no-control-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1"
+    },
+    {
+      "title": "No Te Vas",
+      "album": "Midnight Line",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-no-te-vas-you-dont-leave-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1"
+    },
+    {
+      "title": "Sin Regresar",
+      "album": "Midnight Line",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-sin-regresar-no-going-back-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1"
+    }
+  ]
+}
