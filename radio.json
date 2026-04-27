@@ -1,11 +1,12 @@
 {
   "artist": "Rio Valencia",
+  "latestUrl": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/latest.json",
   "featuredTrack": {
-    "title": "Midnight Line",
+    "title": "No Control",
     "artist": "Rio Valencia",
     "album": "Midnight Line",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midnight-line-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1"
+    "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-no-control-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1"
   },
   "tracks": [
     {
@@ -13,6 +14,12 @@
       "album": "Midnight Line",
       "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-no-control-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1"
+    },
+    {
+      "title": "Midnight Line",
+      "album": "Midnight Line",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/rio-valencia-midnight-line-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1"
     },
     {
       "title": "No Te Vas",
