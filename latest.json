@@ -3,8 +3,14 @@
   "artist": "Rio Valencia",
   "album": "Midnight Line",
   "type": "Latest Single",
-  "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/covers/rio-valencia-no-control-cover.png",
-  "image": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/covers/rio-valencia-no-control-cover.png",
+  "cover": "images/covers/rio-valencia-no-control-cover.png",
+  "image": "images/covers/rio-valencia-no-control-cover.png",
   "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
-  "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1"
+  "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
+  "videos": [
+    {
+      "title": "Official Video",
+      "youtube": "https://youtu.be/4Xp6RwGYuws"
+    }
+  ]
 }
