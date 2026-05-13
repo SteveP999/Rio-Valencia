@@ -7,7 +7,13 @@
     "album": "Midnight Line",
     "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png",
     "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
-    "videos": []
+    "videos": [
+      {
+        "title": "No Control",
+        "youtube": "https://youtu.be/4Xp6RwGYuws",
+        "order": 1
+      }
+    ]
   },
   "tracks": [
     {
@@ -16,7 +22,13 @@
       "album": "Midnight Line",
       "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
-      "videos": []
+      "videos": [
+        {
+          "title": "No Control",
+          "youtube": "https://youtu.be/4Xp6RwGYuws",
+          "order": 1
+        }
+      ]
     },
     {
       "title": "Midnight Line",
