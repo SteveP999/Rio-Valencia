@@ -203,17 +203,17 @@ a{color:inherit}
 #latest-single{
   position:relative;
   background:linear-gradient(135deg,var(--mid),var(--ink));
-  padding:1.65rem 0;
+  padding:4rem 0;
   border-top:1px solid var(--faded-line);
   border-bottom:1px solid var(--faded-line);
   z-index:1;
 }
-.latest-inner{max-width:1040px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:170px 1fr;gap:1.75rem;align-items:center}
-.latest-cover{width:100%;max-width:170px;aspect-ratio:1;object-fit:cover;display:block;border-radius:var(--radius);box-shadow:0 0 28px var(--accent-glow),0 12px 34px rgba(0,0,0,.68)}
-.latest-badge,.album-badge{font-family:'Barlow Condensed',serif;display:inline-block;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);padding:.24rem .75rem;margin-bottom:.65rem}
-.latest-title{font-family:'Bebas Neue',serif;font-size:clamp(1.55rem,2.8vw,2.35rem);font-weight:400;color:var(--white);line-height:1.05;margin-bottom:.18rem;text-transform:uppercase}
-.latest-sub,.album-artist{font-family:'Barlow Condensed',serif;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
-.latest-play-btn{display:inline-flex;align-items:center;gap:.65rem;background:transparent;color:var(--accent);border:1px solid var(--line);padding:.58rem 1.35rem;font-family:'Barlow Condensed',serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,background .2s}
+.latest-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:360px 1fr;gap:4rem;align-items:center}
+.latest-cover{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:var(--radius);box-shadow:0 0 50px var(--accent-glow),0 24px 64px rgba(0,0,0,.8)}
+.latest-badge,.album-badge{font-family:'Barlow Condensed',serif;display:inline-block;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);padding:.28rem .85rem;margin-bottom:1.2rem}
+.latest-title{font-family:'Bebas Neue',serif;font-size:clamp(1.9rem,3.6vw,3rem);font-weight:400;color:var(--white);line-height:1.12;margin-bottom:.4rem;text-transform:uppercase}
+.latest-sub,.album-artist{font-family:'Barlow Condensed',serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+.latest-play-btn{display:inline-flex;align-items:center;gap:.75rem;background:transparent;color:var(--accent);border:1px solid var(--line);padding:.85rem 2rem;font-family:'Barlow Condensed',serif;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:border-color .2s,background .2s}
 .latest-play-btn:hover{background:var(--accent-glow)}
 
 #albums{
@@ -378,21 +378,17 @@ a{color:inherit}
 .photo-strip.empty{display:none}
 
 .video-grid{
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
   padding:1.5rem;
-  max-width:920px;
-  margin:0 auto;
 }
 .video-card{
   display:block;
-  width:100%;
   text-decoration:none;
   color:inherit;
   border:1px solid var(--line);
   background:rgba(0,0,0,.22);
-  box-shadow:0 22px 80px rgba(0,0,0,.42);
   transition:transform .2s,border-color .2s,background .2s;
 }
 .video-card:hover{
@@ -413,9 +409,9 @@ a{color:inherit}
 }
 .video-card-title{
   font-family:'Bebas Neue',serif;
-  font-size:clamp(1.35rem,2.2vw,1.85rem);
+  font-size:1.2rem;
   color:var(--white);
-  padding:1.15rem 1.25rem .2rem;
+  padding:1rem 1rem .15rem;
   text-transform:uppercase;
 }
 .video-card-actions{
@@ -848,18 +844,11 @@ footer{
   .stage{min-height:74vh}
   .stage-inner{min-height:74vh;padding:5.6rem 1rem 2.2rem}
   .stage-logo img{width:min(620px,96vw);max-height:243px}
-  .latest-inner{grid-template-columns:118px minmax(0,1fr);gap:1rem;padding:0 1rem}
-  .latest-cover{max-width:118px}
-  .latest-title{font-size:clamp(1.25rem,6vw,1.8rem)}
-  .latest-sub{margin-bottom:.65rem}
-  .latest-play-btn{padding:.5rem .95rem;font-size:.62rem}
-  .album-layout,.album-layout.cover-right{grid-template-columns:1fr}
+  .latest-inner,.album-layout,.album-layout.cover-right{grid-template-columns:1fr}
   .album-layout.cover-right .album-cover-wrap,.album-layout.cover-right .album-info{grid-column:auto;grid-row:auto}
 
   .release-wall{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:1rem}
   .release-card{max-width:none}
-  .video-grid{padding:1rem;gap:1.35rem}
-  .feature-video{width:min(920px,96vw)}
   #albums,.lower-video-section,#bio,.photo-strip,footer{background-attachment:scroll}
   .photo-strip{grid-template-columns:1fr;height:auto}
   .photo-strip img{height:340px}
@@ -947,7 +936,7 @@ footer{
 </div>
 
 <audio id="audio"></audio>
-<script id="artist-data" type="application/json">{"artist": {"id": "rio-valencia", "name": "Rio Valencia", "genre": "Latin pop / reggaeton fusion", "tagline": "Rio Valencia is part of the Hello Texas Records roster.", "bio": "Rio Valencia is part of the Hello Texas Records roster.", "theme": "latin", "logo": "images/logos/rio-valencia-logo.png", "hero": "images/artist/rio-valencia-hero-photo.png", "discographyBg": "images/artist/rio-valencia-discography-bg.png", "videoBg": "images/artist/rio-valencia-video-bg.png", "photos": ["images/artist/rio-valencia-photo-1.png", "images/artist/rio-valencia-photo-2.png", "images/artist/rio-valencia-photo-3.png"]}, "latest": {"title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "type": "Latest Single", "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "image": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}]}, "songs": [{"id": "no_control", "num": "01", "title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 1, "albumOrder": 1, "albumSortOrder": 9999, "sourceOrder": 1, "albumCover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "type": "single", "isLatest": true, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "midnight_line", "num": "02", "title": "Midnight Line", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 2, "albumOrder": 2, "albumSortOrder": 9999, "sourceOrder": 2, "albumCover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-midnight-line-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-midnight-line-cover.png", "audio": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "no_te_vas", "num": "03", "title": "No Te Vas", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 3, "albumOrder": 3, "albumSortOrder": 9999, "sourceOrder": 3, "albumCover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-te-vas-you-dont-leave-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-te-vas-you-dont-leave-cover.png", "audio": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "sin_regresar", "num": "04", "title": "Sin Regresar", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 4, "albumOrder": 4, "albumSortOrder": 9999, "sourceOrder": 4, "albumCover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-sin-regresar-no-going-back-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-sin-regresar-no-going-back-cover.png", "audio": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}], "hasVideoSection": true}</script>
+<script id="artist-data" type="application/json">{"artist": {"id": "rio-valencia", "name": "Rio Valencia", "genre": "Latin pop / reggaeton fusion", "tagline": "Rio Valencia is part of the Hello Texas Records roster.", "bio": "Rio Valencia is part of the Hello Texas Records roster.", "theme": "latin", "logo": "images/logos/rio-valencia-logo.png", "hero": "images/artist/rio-valencia-hero-photo.png", "discographyBg": "images/artist/rio-valencia-discography-bg.png", "videoBg": "images/artist/rio-valencia-video-bg.png", "photos": ["images/artist/rio-valencia-photo-1.png", "images/artist/rio-valencia-photo-2.png", "images/artist/rio-valencia-photo-3.png"]}, "latest": {"title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "type": "Latest Single", "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "image": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}]}, "songs": [{"id": "no_control", "num": "01", "title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 1, "albumOrder": 1, "albumSortOrder": 9999, "sourceOrder": 1, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": true, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "midnight_line", "num": "02", "title": "Midnight Line", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 2, "albumOrder": 2, "albumSortOrder": 9999, "sourceOrder": 2, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-midnight-line-cover.png", "audio": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "no_te_vas", "num": "03", "title": "No Te Vas", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 3, "albumOrder": 3, "albumSortOrder": 9999, "sourceOrder": 3, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-no-te-vas-you-dont-leave-cover.png", "audio": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "sin_regresar", "num": "04", "title": "Sin Regresar", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 4, "albumOrder": 4, "albumSortOrder": 9999, "sourceOrder": 4, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-sin-regresar-no-going-back-cover.png", "audio": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}], "hasVideoSection": true}</script>
 <script>
 const DATA = JSON.parse(document.getElementById('artist-data').textContent);
 const SONGS = DATA.songs || [];
