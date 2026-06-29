@@ -2,14 +2,22 @@
   "artist": "Rio Valencia",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Fuego Lento",
+    "title": "Buenos Noches",
     "artist": "Rio Valencia",
     "album": "Midnight Line",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-fuego-lento-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-buenos-noches-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
     "videos": []
   },
   "tracks": [
+    {
+      "title": "Buenos Noches",
+      "artist": "Rio Valencia",
+      "album": "Midnight Line",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-buenos-noches-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
+      "videos": []
+    },
     {
       "title": "Fuego Lento",
       "artist": "Rio Valencia",
