@@ -3,8 +3,8 @@
   "artist": "Rio Valencia",
   "album": "Midnight Line",
   "type": "Latest Single",
-  "cover": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-buenos-noches-cover.png",
-  "image": "https://raw.githubusercontent.com/SteveP999/Rio-Valencia/main/images/covers/rio-valencia-buenos-noches-cover.png",
+  "cover": "images/covers/rio-valencia-buenos-noches-cover.png",
+  "image": "images/covers/rio-valencia-buenos-noches-cover.png",
   "audio": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
   "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
   "videos": []
