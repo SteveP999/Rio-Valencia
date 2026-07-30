@@ -628,6 +628,46 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:4rem 2re
   border-top:1px solid color-mix(in srgb,var(--accent) 14%, transparent);
 }
 
+.track-streams{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem;
+  padding:0 0 .7rem 44px;
+  margin-top:-.35rem;
+  border-bottom:1px solid color-mix(in srgb,var(--accent) 9%, transparent);
+}
+.stream-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.32rem;
+  font-size:.6rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:.28rem .62rem;
+  border-radius:999px;
+  border:1px solid color-mix(in srgb,var(--accent) 30%, transparent);
+  color:var(--cream);
+  text-decoration:none;
+  background:color-mix(in srgb,var(--accent) 6%, transparent);
+  transition:background .15s,border-color .15s;
+}
+.stream-link:hover{
+  background:color-mix(in srgb,var(--accent) 18%, transparent);
+  border-color:var(--accent);
+}
+.stream-link::before{
+  content:"";
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);
+  flex-shrink:0;
+}
+.stream-link.spotify::before{background:#1DB954;}
+.stream-link.apple::before{background:#FA243C;}
+.stream-link.ytm::before{background:#FF0000;}
+@media only screen and (max-width:600px){
+  .track-streams{padding-left:36px;}
+}
+
 .track-row{
   display:grid !important;
   grid-template-columns:44px minmax(0,1fr) auto 34px !important;
@@ -1157,7 +1197,7 @@ footer{background:linear-gradient(to bottom,rgba(0,0,0,.28),rgba(0,0,0,.52)),var
 </div>
 
 <audio id="audio"></audio>
-<script id="artist-data" type="application/json">{"artist": {"id": "rio-valencia", "name": "Rio Valencia", "genre": "Latin pop / reggaeton fusion", "tagline": "Latin fire with no boundaries", "bio": "Latin fire with no boundaries", "theme": "latin_orange", "logo": "images/logos/rio-valencia-logo.png", "hero": "images/artist/rio-valencia-hero-photo.png", "discographyBg": "images/artist/rio-valencia-discography-bg.png", "videoBg": "images/artist/rio-valencia-video-bg.png", "photos": ["images/artist/rio-valencia-photo-1.png", "images/artist/rio-valencia-photo-2.png", "images/artist/rio-valencia-photo-3.png"]}, "latest": {"title": "Buenos Noches", "artist": "Rio Valencia", "album": "Midnight Line", "type": "Latest Single", "cover": "images/covers/rio-valencia-buenos-noches-cover.png", "image": "images/covers/rio-valencia-buenos-noches-cover.png", "audio": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "videos": []}, "songs": [{"id": "rio-valencia-buenos-noches", "num": "01", "title": "Buenos Noches", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 1, "albumOrder": 1, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": true, "cover": "images/covers/rio-valencia-buenos-noches-cover.png", "audio": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": []}, {"id": "rio-valencia-fuego-lento", "num": "02", "title": "Fuego Lento", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 2, "albumOrder": 2, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-fuego-lento-cover.png", "audio": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": []}, {"id": "midnight_line", "num": "03", "title": "Midnight Line", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 3, "albumOrder": 3, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-midnight-line-cover.png", "audio": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "no_control", "num": "04", "title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 4, "albumOrder": 4, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "no_te_vas", "num": "05", "title": "No Te Vas", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 5, "albumOrder": 5, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-no-te-vas-you-dont-leave-cover.png", "audio": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}, {"id": "sin_regresar", "num": "06", "title": "Sin Regresar", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 6, "albumOrder": 6, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-sin-regresar-no-going-back-cover.png", "audio": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": []}], "hasVideoSection": true}</script>
+<script id="artist-data" type="application/json">{"artist": {"id": "rio-valencia", "name": "Rio Valencia", "genre": "Latin pop / reggaeton fusion", "tagline": "Latin fire with no boundaries", "bio": "Latin fire with no boundaries", "theme": "latin_orange", "logo": "images/logos/rio-valencia-logo.png", "hero": "images/artist/rio-valencia-hero-photo.png", "discographyBg": "images/artist/rio-valencia-discography-bg.png", "videoBg": "images/artist/rio-valencia-video-bg.png", "photos": ["images/artist/rio-valencia-photo-1.png", "images/artist/rio-valencia-photo-2.png", "images/artist/rio-valencia-photo-3.png"]}, "latest": {"title": "Sin Prisa", "artist": "Rio Valencia", "album": "Midnight Line", "type": "Latest Single", "cover": "images/covers/rio-valencia-sin-prisa-cover.png", "image": "images/covers/rio-valencia-sin-prisa-cover.png", "audio": "https://www.dropbox.com/scl/fi/uekcy63qujoufdiih4pue/rio-valencia-sin-prisa-mp3.mp3?rlkey=fedpyfapp9eu2bfxtkesf9lk4&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/uekcy63qujoufdiih4pue/rio-valencia-sin-prisa-mp3.mp3?rlkey=fedpyfapp9eu2bfxtkesf9lk4&raw=1", "videos": []}, "songs": [{"id": "rio-valencia-buenos-noches", "num": "01", "title": "Buenos Noches", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 1, "albumOrder": 1, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-buenos-noches-cover.png", "audio": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": [], "streaming": {}}, {"id": "rio-valencia-fuego-lento", "num": "02", "title": "Fuego Lento", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 2, "albumOrder": 2, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-fuego-lento-cover.png", "audio": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": [], "streaming": {}}, {"id": "midnight_line", "num": "03", "title": "Midnight Line", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 3, "albumOrder": 3, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-midnight-line-cover.png", "audio": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/tqb3ft2xifve6ovysxuaw/Midight-Line-Mastered-MP3.mp3?rlkey=2z4vel6o30i858b9akegrfd35&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "no_control", "num": "04", "title": "No Control", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 4, "albumOrder": 4, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-no-control-cover.png", "audio": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1", "videos": [{"title": "No Control", "youtube": "https://youtu.be/4Xp6RwGYuws", "order": 1}], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "rio-valencia-no-digas-nada", "num": "05", "title": "No Digas Nada", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 5, "albumOrder": 5, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-no-digas-nada-cover.png", "audio": "https://www.dropbox.com/scl/fi/zrboeh2lgega8v1tvitlz/rio-valencia-no-digas-nada-MP3.mp3?rlkey=d00lr4j21iv3gq8rbe58xdy76&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/zrboeh2lgega8v1tvitlz/rio-valencia-no-digas-nada-MP3.mp3?rlkey=d00lr4j21iv3gq8rbe58xdy76&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": [], "streaming": {}}, {"id": "no_te_vas", "num": "06", "title": "No Te Vas", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 6, "albumOrder": 6, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-no-te-vas-you-dont-leave-cover.png", "audio": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/1etgax05sxjqo2m55h78v/No-Te-Vas-You-Don-t-Leave-Mastered-MP3.mp3?rlkey=0e3ue4n3vhpl9uppv3nzh8v33&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "rio-valencia-sin-prisa", "num": "07", "title": "Sin Prisa", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 7, "albumOrder": 7, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": true, "cover": "images/covers/rio-valencia-sin-prisa-cover.png", "audio": "https://www.dropbox.com/scl/fi/uekcy63qujoufdiih4pue/rio-valencia-sin-prisa-mp3.mp3?rlkey=fedpyfapp9eu2bfxtkesf9lk4&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/uekcy63qujoufdiih4pue/rio-valencia-sin-prisa-mp3.mp3?rlkey=fedpyfapp9eu2bfxtkesf9lk4&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": true, "explicit": false, "tags": [], "streaming": {}}, {"id": "sin_regresar", "num": "08", "title": "Sin Regresar", "artist": "Rio Valencia", "album": "Midnight Line", "trackNumber": 8, "albumOrder": 8, "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/rio-valencia-sin-regresar-no-going-back-cover.png", "audio": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}], "hasVideoSection": true}</script>
 <script>
 const DATA = JSON.parse(document.getElementById('artist-data').textContent);
 const SONGS = DATA.songs || [];
@@ -1168,6 +1208,15 @@ function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
 }
 function songCover(song) { return song.cover || song.albumCover || ''; }
+function streamingRow(song) {
+  const s = song.streaming || {};
+  const items = [];
+  if (s.spotify) items.push(`<a class="stream-link spotify" href="${esc(s.spotify)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Spotify</a>`);
+  if (s.apple) items.push(`<a class="stream-link apple" href="${esc(s.apple)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Apple Music</a>`);
+  if (s.youtubeMusic) items.push(`<a class="stream-link ytm" href="${esc(s.youtubeMusic)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">YouTube Music</a>`);
+  if (!items.length) return '';
+  return `<div class="track-streams">${items.join('')}</div>`;
+}
 
 function updateNowPlayingArt(song) {
   // Find which album this song belongs to and show its art
@@ -1324,6 +1373,7 @@ function renderAlbums() {
           <div class="track-badge-cell">${latestBadge}</div>
           <button class="track-play-btn" onclick="playSongById('${esc(song.id)}')" aria-label="Play ${esc(song.title)}">&#9654;</button>
         </div>
+        ${streamingRow(song)}
       `;
     }).join('');
 
