@@ -193,5 +193,26 @@
     "explicit": false,
     "tags": [],
     "streaming": {}
+  },
+  {
+    "id": "rio-valencia-adi-s-amiga",
+    "num": "10",
+    "title": "Adiós, Amiga",
+    "artist": "Rio Valencia",
+    "album": "Midnight Line",
+    "trackNumber": 10,
+    "albumOrder": 10,
+    "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png",
+    "type": "single",
+    "isLatest": true,
+    "cover": "images/covers/rio-valencia-adi-s-amiga-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/1hk6lexc2pasa5id1vn6i/rio-valencia-adios-amiga-MP3-mastered.mp3?rlkey=ceu1e4v8qcz4negur2wxsf95v&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/1hk6lexc2pasa5id1vn6i/rio-valencia-adios-amiga-MP3-mastered.mp3?rlkey=ceu1e4v8qcz4negur2wxsf95v&raw=1",
+    "videos": [],
+    "includeOnRadio": true,
+    "includeOnHomepage": true,
+    "explicit": false,
+    "tags": [],
+    "streaming": {}
   }
 ]
