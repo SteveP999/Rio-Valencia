@@ -2,11 +2,11 @@
   "artist": "Rio Valencia",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Cerca Di Mi",
+    "title": "Adiós, Amiga",
     "artist": "Rio Valencia",
     "album": "Midnight Line",
-    "cover": "images/covers/rio-valencia-cerca-di-mi-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/se3w6699imu7yj2mueh1i/rio-valencia-cerca-di-mi-mp3.mp3?rlkey=ivdn9mhifdnx6ir2yhfsznfgo&st=dfm4y5aj&raw=1",
+    "cover": "images/covers/rio-valencia-adi-s-amiga-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/1hk6lexc2pasa5id1vn6i/rio-valencia-adios-amiga-MP3-mastered.mp3?rlkey=ceu1e4v8qcz4negur2wxsf95v&raw=1",
     "videos": []
   },
   "tracks": [
@@ -50,8 +50,8 @@
       "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
       "videos": [
         {
-          "title": "No Control",
           "youtube": "https://youtu.be/4Xp6RwGYuws",
+          "title": "Official Video",
           "order": 1
         }
       ]
@@ -86,6 +86,14 @@
       "album": "Midnight Line",
       "cover": "images/covers/rio-valencia-sin-regresar-no-going-back-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/4dqf8e3lbstvxzvjn5wt9/Sin-Regresar-No-Going-Back-Mastered-MP3-Re-do.mp3?rlkey=j5923sohwcu4dvbtgsdxj4w82&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Adiós, Amiga",
+      "artist": "Rio Valencia",
+      "album": "Midnight Line",
+      "cover": "images/covers/rio-valencia-adi-s-amiga-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/1hk6lexc2pasa5id1vn6i/rio-valencia-adios-amiga-MP3-mastered.mp3?rlkey=ceu1e4v8qcz4negur2wxsf95v&raw=1",
       "videos": []
     }
   ]

@@ -30,7 +30,7 @@
     "albumOrder": 2,
     "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png",
     "type": "single",
-    "isLatest": true,
+    "isLatest": false,
     "cover": "images/covers/rio-valencia-cerca-di-mi-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/se3w6699imu7yj2mueh1i/rio-valencia-cerca-di-mi-mp3.mp3?rlkey=ivdn9mhifdnx6ir2yhfsznfgo&st=dfm4y5aj&raw=1",
     "audioSrc": "https://www.dropbox.com/scl/fi/se3w6699imu7yj2mueh1i/rio-valencia-cerca-di-mi-mp3.mp3?rlkey=ivdn9mhifdnx6ir2yhfsznfgo&st=dfm4y5aj&raw=1",
@@ -99,8 +99,8 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/xl6id8cftbsvrqpsueehx/No-Control-Mastered-MP3.mp3?rlkey=4vxmg9u10jckquwf5xkloccq0&raw=1",
     "videos": [
       {
-        "title": "No Control",
         "youtube": "https://youtu.be/4Xp6RwGYuws",
+        "title": "Official Video",
         "order": 1
       }
     ],
