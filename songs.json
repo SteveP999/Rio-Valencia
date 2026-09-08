@@ -268,5 +268,26 @@
     "explicit": false,
     "tags": [],
     "streaming": {}
+  },
+  {
+    "id": "rio-valencia-mi-camino",
+    "num": "01",
+    "title": "Mi Camino",
+    "artist": "Rio Valencia",
+    "album": "Midnight Line",
+    "trackNumber": 99,
+    "albumOrder": 99,
+    "albumCover": "",
+    "type": "single",
+    "isLatest": false,
+    "cover": "images/covers/rio-valencia-mi-camino-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/i2taq1u3n4h6vpyncuu5p/rio-valencia-mi-camino-MP3-mastered.mp3?rlkey=tzk6gr75m6krp6ponerxkal71&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/i2taq1u3n4h6vpyncuu5p/rio-valencia-mi-camino-MP3-mastered.mp3?rlkey=tzk6gr75m6krp6ponerxkal71&raw=1",
+    "videos": [],
+    "includeOnRadio": true,
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": [],
+    "streaming": {}
   }
 ]
