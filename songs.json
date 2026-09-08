@@ -9,13 +9,13 @@
     "albumOrder": 1,
     "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png",
     "type": "single",
-    "isLatest": true,
+    "isLatest": false,
     "cover": "images/covers/rio-valencia-buenos-noches-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
     "audioSrc": "https://www.dropbox.com/scl/fi/gw76ynyxtfrz0gfuf6ea3/rio-valencia-buenos-noches-mp3.mp3?rlkey=8aygdxdod8fpkiqinlyfk701h&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -23,14 +23,14 @@
   {
     "id": "rio-valencia-cerca-di-mi",
     "num": "02",
-    "title": "Cerca Di Mi",
+    "title": "Cerca De Mi",
     "artist": "Rio Valencia",
     "album": "Midnight Line",
     "trackNumber": 2,
     "albumOrder": 2,
     "albumCover": "images/covers/rio-valencia-midnight-line-ALBUM-cover.png",
     "type": "single",
-    "isLatest": false,
+    "isLatest": true,
     "cover": "images/covers/rio-valencia-cerca-di-mi-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/se3w6699imu7yj2mueh1i/rio-valencia-cerca-di-mi-mp3.mp3?rlkey=ivdn9mhifdnx6ir2yhfsznfgo&st=dfm4y5aj&raw=1",
     "audioSrc": "https://www.dropbox.com/scl/fi/se3w6699imu7yj2mueh1i/rio-valencia-cerca-di-mi-mp3.mp3?rlkey=ivdn9mhifdnx6ir2yhfsznfgo&st=dfm4y5aj&raw=1",
@@ -39,7 +39,11 @@
     "includeOnHomepage": true,
     "explicit": false,
     "tags": [],
-    "streaming": {}
+    "streaming": {
+      "spotify": "",
+      "apple": "",
+      "youtubeMusic": ""
+    }
   },
   {
     "id": "rio-valencia-fuego-lento",
@@ -57,7 +61,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/oxbuh9er967uqk8vh0v17/rio-valencia-fuego-lento-mp3.mp3?rlkey=4raf1rl7xr3exlmd721dsst2a&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {
@@ -134,7 +138,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/zrboeh2lgega8v1tvitlz/rio-valencia-no-digas-nada-MP3.mp3?rlkey=d00lr4j21iv3gq8rbe58xdy76&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -176,7 +180,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/uekcy63qujoufdiih4pue/rio-valencia-sin-prisa-mp3.mp3?rlkey=fedpyfapp9eu2bfxtkesf9lk4&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
